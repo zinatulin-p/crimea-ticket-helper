@@ -21,7 +21,7 @@
       justify-content: center;
       background:
         linear-gradient(to bottom right, rgba(15,23,42,0.6), rgba(15,23,42,0.72)),
-        url("train-bg.jpg") center/cover no-repeat fixed;
+        url("train-bg.jpg") center/cover no-repeat fixed; /* фон поезда */
     }
     .wrap {
       width: 100%;
@@ -44,6 +44,7 @@
       grid-template-columns: minmax(0,1.5fr) minmax(0,1.1fr);
       gap: 18px;
       margin-bottom: 18px;
+      align-items: stretch;
     }
     .bottom {
       display: grid;
@@ -59,6 +60,8 @@
       border: 1px solid rgba(148,163,184,0.4);
       color: #e5e7eb;
       box-shadow: 0 22px 55px rgba(15,23,42,0.9);
+      display: flex;
+      flex-direction: column;
     }
 
     .hero-title {
@@ -224,34 +227,36 @@
           </div>
 
           <div class="card">
-            <h2>Как это работает</h2>
-            <div class="steps">
-              <div>
-                <div class="step-label">Шаг 1</div>
-                <div class="step-title">Обсуждаем запрос</div>
-                <div class="step-text">
-                  Вы пишете даты туда и обратно, направление и сколько мест нужно. Оцениваем шансы и срок поиска.
+            <div style="flex:1;display:flex;flex-direction:column;">
+              <h2>Как это работает</h2>
+              <div class="steps">
+                <div>
+                  <div class="step-label">Шаг 1</div>
+                  <div class="step-title">Обсуждаем запрос</div>
+                  <div class="step-text">
+                    Вы пишете даты туда и обратно, направление и сколько мест нужно. Оцениваем шансы и срок поиска.
+                  </div>
                 </div>
-              </div>
-              <div>
-                <div class="step-label">Шаг 2</div>
-                <div class="step-title">Я отслеживаю места</div>
-                <div class="step-text">
-                  Ловлю возвраты по выбранным поездам и датам и беру подходящие варианты сразу, как они появляются.
+                <div>
+                  <div class="step-label">Шаг 2</div>
+                  <div class="step-title">Я отслеживаю места</div>
+                  <div class="step-text">
+                    Ловлю возвраты по выбранным поездам и датам и беру подходящие варианты сразу, как они появляются.
+                  </div>
                 </div>
-              </div>
-              <div>
-                <div class="step-label">Шаг 3</div>
-                <div class="step-title">Оформляю билеты</div>
-                <div class="step-text">
-                  Оформляю билеты на ваши данные и отправляю подтверждения и инструкции по оплате.
+                <div>
+                  <div class="step-label">Шаг 3</div>
+                  <div class="step-title">Оформляю билеты</div>
+                  <div class="step-text">
+                    Оформляю билеты на ваши данные и отправляю подтверждения и инструкции по оплате.
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </section>
 
-        <!-- НИЖНИЙ РЯД -->
+        <!-- НИЖНИЙ РЯД 1 -->
         <section class="bottom">
           <div class="card">
             <span class="badge">Почему шанс всё ещё есть</span>
@@ -279,7 +284,7 @@
           </div>
         </section>
 
-        <!-- FAQ -->
+        <!-- НИЖНИЙ РЯД 2 -->
         <section class="bottom" style="margin-top:18px;">
           <div class="card">
             <h2>Кому это особенно полезно</h2>

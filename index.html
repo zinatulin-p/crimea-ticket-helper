@@ -13,18 +13,19 @@
       background: #020617;
     }
     a { color: inherit; text-decoration: none; }
+
     .page {
       min-height: 100vh;
       display: flex;
       align-items: stretch;
       justify-content: center;
       background:
-        linear-gradient(to bottom right, rgba(15,23,42,0.9), rgba(15,23,42,0.94)),
-        url("train-bg.jpg") center/cover no-repeat fixed; /* ЗАМЕНИ train-bg.jpg на свой файл */
+        linear-gradient(to bottom right, rgba(15,23,42,0.82), rgba(15,23,42,0.87)),
+        url("train-bg.jpg") center/cover no-repeat fixed; /* твой фон поезда */
     }
     .wrap {
       width: 100%;
-      max-width: 960px;
+      max-width: 1000px;
       padding: 24px 16px 40px;
     }
 
@@ -32,26 +33,19 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      margin-bottom: 20px;
+      margin-bottom: 18px;
       color: #e5e7eb;
     }
     .logo { font-size: 18px; font-weight: 600; }
     .tagline { font-size: 13px; opacity: .8; }
-    .pill {
-      font-size: 11px;
-      padding: 4px 10px;
-      border-radius: 999px;
-      background: rgba(37,99,235,0.25);
-      color: #dbeafe;
-    }
 
-    .grid {
+    .sections {
       display: grid;
-      grid-template-columns: minmax(0,1.4fr) minmax(0,1fr);
-      gap: 16px;
+      grid-template-columns: minmax(0,1.35fr) minmax(0,1fr);
+      gap: 18px;
     }
     .card {
-      background: rgba(15,23,42,0.96);
+      background: rgba(15,23,42,0.94);
       border-radius: 18px;
       padding: 18px 18px 16px;
       border: 1px solid rgba(148,163,184,0.35);
@@ -92,14 +86,28 @@
       cursor: pointer;
       color: #0f172a;
       background: #22c55e;
-      box-shadow: 0 12px 30px rgba(22,163,74,0.6);
+      box-shadow: 0 12px 30px rgba(22,163,74,0.7);
     }
     .btn-main:hover { filter: brightness(1.05); }
 
+    .btn-ghost {
+      border-radius: 999px;
+      padding: 9px 16px;
+      font-size: 13px;
+      border: 1px solid rgba(148,163,184,0.7);
+      background: transparent;
+      color: #e5e7eb;
+      cursor: pointer;
+    }
+    .btn-ghost:hover { background: rgba(15,23,42,0.8); }
+
     .contacts {
+      margin-top: 8px;
       font-size: 13px;
       color: #e5e7eb;
+      display: none;
     }
+    .contacts a { text-decoration: underline; }
 
     h2 {
       font-size: 17px;
@@ -111,25 +119,13 @@
 
     .steps {
       display: grid;
-      grid-template-columns: repeat(auto-fit,minmax(160px,1fr));
+      grid-template-columns: repeat(auto-fit,minmax(170px,1fr));
       gap: 10px;
       margin-top: 8px;
     }
-    .step-title {
-      font-size: 13px;
-      font-weight: 600;
-      margin-bottom: 2px;
-      color: #e5e7eb;
-    }
-    .step-text {
-      font-size: 12px;
-      color: #cbd5f5;
-    }
-    .label {
-      font-size: 11px;
-      color: #a5b4fc;
-      margin-bottom: 2px;
-    }
+    .step-label { font-size: 11px; color: #a5b4fc; margin-bottom: 2px; }
+    .step-title { font-size: 13px; font-weight: 600; margin-bottom: 2px; color: #e5e7eb; }
+    .step-text { font-size: 12px; color: #cbd5f5; }
 
     ul.clean { list-style: none; font-size: 13px; color: #e5e7eb; }
     ul.clean li { margin-bottom: 4px; }
@@ -142,7 +138,7 @@
     }
 
     @media (max-width: 768px) {
-      .grid { grid-template-columns: 1fr; }
+      .sections { grid-template-columns: 1fr; }
       header { flex-direction: column; align-items: flex-start; gap: 4px; }
       .hero-title { font-size: 20px; }
       .card { padding: 16px 14px 14px; }
@@ -157,11 +153,10 @@
           <div class="logo">Билет в Крым без нервов</div>
           <div class="tagline">Персональное сопровождение поиска жд‑билетов</div>
         </div>
-        <div class="pill">Летом билеты заканчиваются за часы</div>
       </header>
 
-      <main class="grid">
-        <!-- ЛЕВАЯ КОЛОНКА -->
+      <main class="sections">
+        <!-- ЛЕВАЯ КАРТОЧКА -->
         <section class="card">
           <div class="hero-title">
             Помогу достать жд‑билет в Крым, когда на сайте «всё разобрали»
@@ -170,48 +165,50 @@
             Беру на себя поиск свободных мест на нужный поезд и дату и оформляю билет на ваши данные. Оплата только за успешно оформленный билет.
           </p>
           <ul class="hero-list">
-            <li>• Подбираю вариант под ваши даты и состав семьи.</li>
+            <li>• Подбираю варианты под ваши даты и состав семьи.</li>
             <li>• Ловлю возвратные места, пока они не исчезли.</li>
-            <li>• Без вечного обновления сайта и «повезёт / не повезёт».</li>
+            <li>• Без вечного обновления сайта и лотереи «повезёт / не повезёт».</li>
           </ul>
           <div class="hero-cta">
             <a href="https://t.me/Neb0skreb" target="_blank" rel="noopener">
-              <button class="btn-main">Оставить запрос в Telegram</button>
+              <button class="btn-main">Написать в Telegram</button>
             </a>
-            <div class="contacts">
-              Телефон: <a href="tel:+79110013162">+7&nbsp;911&nbsp;001‑31‑62</a><br/>
-              Telegram: <a href="https://t.me/Neb0skreb" target="_blank" rel="noopener">@Neb0skreb</a><br/>
-              Услуга 750 ₽ за один оформленный билет.
-            </div>
+            <button class="btn-ghost" id="show-contacts">Показать контакты</button>
+          </div>
+          <div class="contacts" id="contacts-block">
+            Телефон: <a href="tel:+79110013162">+7&nbsp;911&nbsp;001‑31‑62</a><br/>
+            Telegram: <a href="https://t.me/Neb0skreb" target="_blank" rel="noopener">@Neb0skreb</a><br/>
+            Услуга 750 ₽ за один оформленный билет. Билет оплачивается отдельно по официальной цене.
           </div>
         </section>
 
-        <!-- ПРАВАЯ КОЛОНКА -->
+        <!-- ПРАВАЯ КАРТОЧКА -->
         <section class="card">
-          <h2>Как всё проходит</h2>
+          <h2>Как это работает</h2>
           <div class="steps">
             <div>
-              <div class="label">Шаг 1</div>
-              <div class="step-title">Созваниваемся или переписываемся</div>
+              <div class="step-label">Шаг 1</div>
+              <div class="step-title">Обсуждаем запрос</div>
               <div class="step-text">
-                Вы рассказываете даты, направление и сколько мест нужно. Оцениваем шансы и срок поиска.
+                Вы пишете даты, направление и сколько мест нужно. Оцениваем шансы и срок поиска.
               </div>
             </div>
             <div>
-              <div class="label">Шаг 2</div>
-              <div class="step-title">Я отслеживаю освобождающиеся места</div>
+              <div class="step-label">Шаг 2</div>
+              <div class="step-title">Я отслеживаю места</div>
               <div class="step-text">
-                Ловлю возвраты по выбранному поезду и дате и сразу беру подходящий вариант.
+                Ловлю возвраты по выбранным поездам и датам, беру подходящие варианты сразу, как они появляются.
               </div>
             </div>
             <div>
-              <div class="label">Шаг 3</div>
-              <div class="step-title">Оформляю билет на ваши данные</div>
+              <div class="step-label">Шаг 3</div>
+              <div class="step-title">Оформляю билет</div>
               <div class="step-text">
-                Оформляю билет и отправляю вам подтверждение и инструкцию по оплате.
+                Оформляю билет на ваши данные и отправляю подтверждение и инструкцию по оплате.
               </div>
             </div>
           </div>
+
           <h2 style="margin-top:12px;">Что потребуется от вас</h2>
           <p>Для оформления билета нужны стандартные данные пассажира:</p>
           <ul class="clean">
@@ -227,5 +224,17 @@
       </footer>
     </div>
   </div>
+
+  <script>
+    const btn = document.getElementById('show-contacts');
+    const block = document.getElementById('contacts-block');
+    if (btn && block) {
+      btn.addEventListener('click', () => {
+        const visible = block.style.display === 'block';
+        block.style.display = visible ? 'none' : 'block';
+        btn.textContent = visible ? 'Показать контакты' : 'Скрыть контакты';
+      });
+    }
+  </script>
 </body>
 </html>

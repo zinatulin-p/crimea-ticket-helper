@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <title>Билет в Крым без нервов</title>
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <meta name="description" content="Помогу достать жд-билет в Крым в нужные даты, когда на сайте всё разобрали." />
+  <meta name="description" content="Помогу достать жд-билет в Крым и из Крыма в нужные даты, когда на сайте всё разобрали." />
   <style>
     * { box-sizing: border-box; margin: 0; padding: 0; }
     body {
@@ -20,8 +20,8 @@
       align-items: stretch;
       justify-content: center;
       background:
-        linear-gradient(to bottom right, rgba(15,23,42,0.78), rgba(15,23,42,0.84)),
-        url("train-bg.jpg") center/cover no-repeat fixed; /* фон поезда */
+        linear-gradient(to bottom right, rgba(15,23,42,0.6), rgba(15,23,42,0.72)),
+        url("train-bg.jpg") center/cover no-repeat fixed;
     }
     .wrap {
       width: 100%;
@@ -37,14 +37,21 @@
       color: #e5e7eb;
     }
     .logo { font-size: 18px; font-weight: 600; }
-    .tagline { font-size: 13px; opacity: .8; }
+    .tagline { font-size: 13px; opacity: .85; }
 
     .layout {
       display: grid;
-      grid-template-columns: minmax(0,1.45fr) minmax(0,1.1fr);
+      grid-template-columns: minmax(0,1.5fr) minmax(0,1.1fr);
       gap: 18px;
       margin-bottom: 18px;
     }
+    .bottom {
+      display: grid;
+      grid-template-columns: minmax(0,1.25fr) minmax(0,1fr);
+      gap: 18px;
+      margin-top: 4px;
+    }
+
     .card {
       background: rgba(15,23,42,0.94);
       border-radius: 20px;
@@ -68,9 +75,15 @@
     .hero-list {
       list-style: none;
       font-size: 14px;
-      margin-bottom: 14px;
+      margin-bottom: 10px;
     }
     .hero-list li { margin-bottom: 4px; }
+
+    .stat {
+      font-size: 12px;
+      color: #a5b4fc;
+      margin-bottom: 10px;
+    }
 
     .hero-cta {
       display: flex;
@@ -110,6 +123,12 @@
     }
     .contacts a { text-decoration: underline; }
 
+    .price-line {
+      font-size: 13px;
+      color: #bbf7d0;
+      margin-top: 6px;
+    }
+
     h2 {
       font-size: 17px;
       font-weight: 600;
@@ -138,13 +157,12 @@
       margin-bottom: 4px;
     }
 
-    .bottom {
-      display: grid;
-      grid-template-columns: minmax(0,1.2fr) minmax(0,1fr);
-      gap: 18px;
-    }
     ul.clean { list-style: none; font-size: 13px; color: #e5e7eb; }
     ul.clean li { margin-bottom: 4px; }
+
+    .faq-item { margin-bottom: 8px; }
+    .faq-q { font-size: 13px; font-weight: 600; color: #e5e7eb; }
+    .faq-a { font-size: 12px; color: #cbd5f5; }
 
     footer {
       margin-top: 18px;
@@ -173,30 +191,35 @@
       </header>
 
       <main>
-        <!-- ВЕРХ: ХЕРО + КАК РАБОТАЕТ -->
+        <!-- ВЕРХ -->
         <section class="layout">
           <div class="card">
             <div class="hero-title">
-              Помогу достать жд‑билет в Крым, когда на сайте «всё разобрали»
+              Помогу достать жд‑билет в Крым и из Крыма, когда на сайте «всё разобрали»
             </div>
             <p class="hero-text">
-              Беру на себя поиск свободных мест на нужный поезд и дату и оформляю билет на ваши данные. Оплата только за успешно оформленный билет.
+              Беру на себя поиск свободных мест на нужные поезда и даты и оформляю билеты на ваши данные. Оплата только за успешно оформленные билеты.
             </p>
             <ul class="hero-list">
-              <li>• Подбираю варианты под ваши даты и состав семьи.</li>
-              <li>• Ловлю возвратные места, пока они не исчезли.</li>
+              <li>• Подбираю варианты под ваши даты, время выезда и состав семьи.</li>
+              <li>• Ловлю возвратные места туда и обратно, пока они не исчезли.</li>
               <li>• Без вечного обновления сайта и лотереи «повезёт / не повезёт».</li>
             </ul>
+            <div class="stat">
+              В 2025 году помог оформить билеты более чем для 100 отпусков — семьи уезжали и возвращались в свои даты.
+            </div>
             <div class="hero-cta">
               <a href="https://t.me/Neb0skreb" target="_blank" rel="noopener">
                 <button class="btn-main">Написать в Telegram</button>
               </a>
               <button class="btn-ghost" id="show-contacts">Показать контакты</button>
             </div>
+            <div class="price-line">
+              Стоимость услуги: 750 ₽ за один оформленный билет (в любую сторону). Билет оплачивается отдельно по официальной цене.
+            </div>
             <div class="contacts" id="contacts-block">
               Телефон: <a href="tel:+79110013162">+7&nbsp;911&nbsp;001‑31‑62</a><br/>
-              Telegram: <a href="https://t.me/Neb0skreb" target="_blank" rel="noopener">@Neb0skreb</a><br/>
-              Услуга 750 ₽ за один оформленный билет. Билет оплачивается отдельно по официальной цене.
+              Telegram: <a href="https://t.me/Neb0skreb" target="_blank" rel="noopener">@Neb0skreb</a>
             </div>
           </div>
 
@@ -207,28 +230,28 @@
                 <div class="step-label">Шаг 1</div>
                 <div class="step-title">Обсуждаем запрос</div>
                 <div class="step-text">
-                  Вы пишете даты, направление и сколько мест нужно. Оцениваем шансы и срок поиска.
+                  Вы пишете даты туда и обратно, направление и сколько мест нужно. Оцениваем шансы и срок поиска.
                 </div>
               </div>
               <div>
                 <div class="step-label">Шаг 2</div>
                 <div class="step-title">Я отслеживаю места</div>
                 <div class="step-text">
-                  Ловлю возвраты по выбранным поездам и датам, беру подходящие варианты сразу, как они появляются.
+                  Ловлю возвраты по выбранным поездам и датам и беру подходящие варианты сразу, как они появляются.
                 </div>
               </div>
               <div>
                 <div class="step-label">Шаг 3</div>
-                <div class="step-title">Оформляю билет</div>
+                <div class="step-title">Оформляю билеты</div>
                 <div class="step-text">
-                  Оформляю билет на ваши данные и отправляю подтверждение и инструкцию по оплате.
+                  Оформляю билеты на ваши данные и отправляю подтверждения и инструкции по оплате.
                 </div>
               </div>
             </div>
           </div>
         </section>
 
-        <!-- НИЗ: ПОЧЕМУ ТАК РАБОТАЕТ + ЧТО НУЖНО -->
+        <!-- НИЖНИЙ РЯД -->
         <section class="bottom">
           <div class="card">
             <span class="badge">Почему шанс всё ещё есть</span>
@@ -244,15 +267,51 @@
 
           <div class="card">
             <h2>Что потребуется от вас</h2>
-            <p>Для оформления билета нужны стандартные данные пассажира:</p>
+            <p>Для оформления билетов нужны стандартные данные пассажиров:</p>
             <ul class="clean">
               <li>• ФИО полностью.</li>
               <li>• Дата рождения.</li>
               <li>• Серия и номер паспорта (или свидетельства о рождении для ребёнка).</li>
             </ul>
             <p style="font-size:12px;color:#9ca3af;margin-top:6px;">
-              Данные используются только для оформления билета и не передаются третьим лицам.
+              Данные используются только для оформления билетов и не передаются третьим лицам.
             </p>
+          </div>
+        </section>
+
+        <!-- FAQ -->
+        <section class="bottom" style="margin-top:18px;">
+          <div class="card">
+            <h2>Кому это особенно полезно</h2>
+            <ul class="clean">
+              <li>• Семьям с детьми, когда важны конкретные даты и нормальное время выезда.</li>
+              <li>• Тем, у кого отпуск по жёстким датам и нет возможности «подвинуться».</li>
+              <li>• Тем, кто устал сидеть на сайте и ловить редкие «окна» по возвратам.</li>
+              <li>• Тем, кто готов заплатить за спокойный и предсказуемый выезд без лотереи.</li>
+            </ul>
+          </div>
+
+          <div class="card">
+            <h2>Частые вопросы</h2>
+            <div class="faq-item">
+              <div class="faq-q">Вы перепродаёте билеты дороже официальной цены?</div>
+              <div class="faq-a">
+                Нет. Билет вы оплачиваете по официальной цене на сайте или в приложении.
+                Я беру деньги только за поиск и сопровождение оформления.
+              </div>
+            </div>
+            <div class="faq-item">
+              <div class="faq-q">Что, если билеты так и не найдутся?</div>
+              <div class="faq-a">
+                В этом случае вы ничего не платите. Оплата только за успешно оформленные билеты.
+              </div>
+            </div>
+            <div class="faq-item">
+              <div class="faq-q">Сколько времени занимает поиск?</div>
+              <div class="faq-a">
+                Обычно от нескольких часов до 2–3 дней — зависит от дат и направления. Если шансы низкие, заранее говорю об этом.
+              </div>
+            </div>
           </div>
         </section>
       </main>

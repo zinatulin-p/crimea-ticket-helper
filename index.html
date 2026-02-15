@@ -20,12 +20,12 @@
       align-items: stretch;
       justify-content: center;
       background:
-        linear-gradient(to bottom right, rgba(15,23,42,0.82), rgba(15,23,42,0.87)),
-        url("train-bg.jpg") center/cover no-repeat fixed; /* твой фон поезда */
+        linear-gradient(to bottom right, rgba(15,23,42,0.78), rgba(15,23,42,0.84)),
+        url("train-bg.jpg") center/cover no-repeat fixed; /* фон поезда */
     }
     .wrap {
       width: 100%;
-      max-width: 1000px;
+      max-width: 1040px;
       padding: 24px 16px 40px;
     }
 
@@ -39,18 +39,19 @@
     .logo { font-size: 18px; font-weight: 600; }
     .tagline { font-size: 13px; opacity: .8; }
 
-    .sections {
+    .layout {
       display: grid;
-      grid-template-columns: minmax(0,1.35fr) minmax(0,1fr);
+      grid-template-columns: minmax(0,1.45fr) minmax(0,1.1fr);
       gap: 18px;
+      margin-bottom: 18px;
     }
     .card {
       background: rgba(15,23,42,0.94);
-      border-radius: 18px;
+      border-radius: 20px;
       padding: 18px 18px 16px;
-      border: 1px solid rgba(148,163,184,0.35);
+      border: 1px solid rgba(148,163,184,0.4);
       color: #e5e7eb;
-      box-shadow: 0 20px 50px rgba(15,23,42,0.9);
+      box-shadow: 0 22px 55px rgba(15,23,42,0.9);
     }
 
     .hero-title {
@@ -99,7 +100,7 @@
       color: #e5e7eb;
       cursor: pointer;
     }
-    .btn-ghost:hover { background: rgba(15,23,42,0.8); }
+    .btn-ghost:hover { background: rgba(15,23,42,0.85); }
 
     .contacts {
       margin-top: 8px;
@@ -127,6 +128,21 @@
     .step-title { font-size: 13px; font-weight: 600; margin-bottom: 2px; color: #e5e7eb; }
     .step-text { font-size: 12px; color: #cbd5f5; }
 
+    .badge {
+      font-size: 11px;
+      padding: 3px 8px;
+      border-radius: 999px;
+      background: rgba(37,99,235,0.18);
+      color: #bfdbfe;
+      display: inline-block;
+      margin-bottom: 4px;
+    }
+
+    .bottom {
+      display: grid;
+      grid-template-columns: minmax(0,1.2fr) minmax(0,1fr);
+      gap: 18px;
+    }
     ul.clean { list-style: none; font-size: 13px; color: #e5e7eb; }
     ul.clean li { margin-bottom: 4px; }
 
@@ -138,7 +154,8 @@
     }
 
     @media (max-width: 768px) {
-      .sections { grid-template-columns: 1fr; }
+      .layout { grid-template-columns: 1fr; }
+      .bottom { grid-template-columns: 1fr; }
       header { flex-direction: column; align-items: flex-start; gap: 4px; }
       .hero-title { font-size: 20px; }
       .card { padding: 16px 14px 14px; }
@@ -155,67 +172,88 @@
         </div>
       </header>
 
-      <main class="sections">
-        <!-- ЛЕВАЯ КАРТОЧКА -->
-        <section class="card">
-          <div class="hero-title">
-            Помогу достать жд‑билет в Крым, когда на сайте «всё разобрали»
+      <main>
+        <!-- ВЕРХ: ХЕРО + КАК РАБОТАЕТ -->
+        <section class="layout">
+          <div class="card">
+            <div class="hero-title">
+              Помогу достать жд‑билет в Крым, когда на сайте «всё разобрали»
+            </div>
+            <p class="hero-text">
+              Беру на себя поиск свободных мест на нужный поезд и дату и оформляю билет на ваши данные. Оплата только за успешно оформленный билет.
+            </p>
+            <ul class="hero-list">
+              <li>• Подбираю варианты под ваши даты и состав семьи.</li>
+              <li>• Ловлю возвратные места, пока они не исчезли.</li>
+              <li>• Без вечного обновления сайта и лотереи «повезёт / не повезёт».</li>
+            </ul>
+            <div class="hero-cta">
+              <a href="https://t.me/Neb0skreb" target="_blank" rel="noopener">
+                <button class="btn-main">Написать в Telegram</button>
+              </a>
+              <button class="btn-ghost" id="show-contacts">Показать контакты</button>
+            </div>
+            <div class="contacts" id="contacts-block">
+              Телефон: <a href="tel:+79110013162">+7&nbsp;911&nbsp;001‑31‑62</a><br/>
+              Telegram: <a href="https://t.me/Neb0skreb" target="_blank" rel="noopener">@Neb0skreb</a><br/>
+              Услуга 750 ₽ за один оформленный билет. Билет оплачивается отдельно по официальной цене.
+            </div>
           </div>
-          <p class="hero-text">
-            Беру на себя поиск свободных мест на нужный поезд и дату и оформляю билет на ваши данные. Оплата только за успешно оформленный билет.
-          </p>
-          <ul class="hero-list">
-            <li>• Подбираю варианты под ваши даты и состав семьи.</li>
-            <li>• Ловлю возвратные места, пока они не исчезли.</li>
-            <li>• Без вечного обновления сайта и лотереи «повезёт / не повезёт».</li>
-          </ul>
-          <div class="hero-cta">
-            <a href="https://t.me/Neb0skreb" target="_blank" rel="noopener">
-              <button class="btn-main">Написать в Telegram</button>
-            </a>
-            <button class="btn-ghost" id="show-contacts">Показать контакты</button>
-          </div>
-          <div class="contacts" id="contacts-block">
-            Телефон: <a href="tel:+79110013162">+7&nbsp;911&nbsp;001‑31‑62</a><br/>
-            Telegram: <a href="https://t.me/Neb0skreb" target="_blank" rel="noopener">@Neb0skreb</a><br/>
-            Услуга 750 ₽ за один оформленный билет. Билет оплачивается отдельно по официальной цене.
+
+          <div class="card">
+            <h2>Как это работает</h2>
+            <div class="steps">
+              <div>
+                <div class="step-label">Шаг 1</div>
+                <div class="step-title">Обсуждаем запрос</div>
+                <div class="step-text">
+                  Вы пишете даты, направление и сколько мест нужно. Оцениваем шансы и срок поиска.
+                </div>
+              </div>
+              <div>
+                <div class="step-label">Шаг 2</div>
+                <div class="step-title">Я отслеживаю места</div>
+                <div class="step-text">
+                  Ловлю возвраты по выбранным поездам и датам, беру подходящие варианты сразу, как они появляются.
+                </div>
+              </div>
+              <div>
+                <div class="step-label">Шаг 3</div>
+                <div class="step-title">Оформляю билет</div>
+                <div class="step-text">
+                  Оформляю билет на ваши данные и отправляю подтверждение и инструкцию по оплате.
+                </div>
+              </div>
+            </div>
           </div>
         </section>
 
-        <!-- ПРАВАЯ КАРТОЧКА -->
-        <section class="card">
-          <h2>Как это работает</h2>
-          <div class="steps">
-            <div>
-              <div class="step-label">Шаг 1</div>
-              <div class="step-title">Обсуждаем запрос</div>
-              <div class="step-text">
-                Вы пишете даты, направление и сколько мест нужно. Оцениваем шансы и срок поиска.
-              </div>
-            </div>
-            <div>
-              <div class="step-label">Шаг 2</div>
-              <div class="step-title">Я отслеживаю места</div>
-              <div class="step-text">
-                Ловлю возвраты по выбранным поездам и датам, беру подходящие варианты сразу, как они появляются.
-              </div>
-            </div>
-            <div>
-              <div class="step-label">Шаг 3</div>
-              <div class="step-title">Оформляю билет</div>
-              <div class="step-text">
-                Оформляю билет на ваши данные и отправляю подтверждение и инструкцию по оплате.
-              </div>
-            </div>
+        <!-- НИЗ: ПОЧЕМУ ТАК РАБОТАЕТ + ЧТО НУЖНО -->
+        <section class="bottom">
+          <div class="card">
+            <span class="badge">Почему шанс всё ещё есть</span>
+            <h2>Почему билетов «нет», но люди всё равно уезжают</h2>
+            <p>
+              Популярные поезда в Крым разбирают в первые часы продаж, поэтому позже видно «нулевые» остатки.
+              Но люди возвращают билеты, меняют планы, не успевают оплатить брони — места снова на короткое время попадают в продажу.
+            </p>
+            <p>
+              Обычный человек не успевает отследить такие окна. Я фокусируюсь на ваших датах и маршруте и ловлю подходящие места, пока они не исчезли.
+            </p>
           </div>
 
-          <h2 style="margin-top:12px;">Что потребуется от вас</h2>
-          <p>Для оформления билета нужны стандартные данные пассажира:</p>
-          <ul class="clean">
-            <li>• ФИО полностью.</li>
-            <li>• Дата рождения.</li>
-            <li>• Серия и номер паспорта (или свидетельства о рождении для ребёнка).</li>
-          </ul>
+          <div class="card">
+            <h2>Что потребуется от вас</h2>
+            <p>Для оформления билета нужны стандартные данные пассажира:</p>
+            <ul class="clean">
+              <li>• ФИО полностью.</li>
+              <li>• Дата рождения.</li>
+              <li>• Серия и номер паспорта (или свидетельства о рождении для ребёнка).</li>
+            </ul>
+            <p style="font-size:12px;color:#9ca3af;margin-top:6px;">
+              Данные используются только для оформления билета и не передаются третьим лицам.
+            </p>
+          </div>
         </section>
       </main>
 

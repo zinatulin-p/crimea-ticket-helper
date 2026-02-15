@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <title>Помогу достать жд‑билет в Крым</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description" content="Услуга по поиску и оформлению жд‑билетов в Крым в нужные даты, когда на сайте ничего нет." />
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif; color: #111827; background: #f3f4f6; line-height: 1.5; }
+    a { color: inherit; text-decoration: none; }
+    .page { max-width: 960px; margin: 0 auto; padding: 24px 16px 48px; }
+    header { padding: 16px 0 0; margin-bottom: 16px; display: flex; justify-content: space-between; align-items: center; }
+    header .logo { font-weight: 700; font-size: 18px; }
+    header .tagline { font-size: 13px; color: #6b7280; }
+    .hero { background: #fff; border-radius: 16px; padding: 24px 20px; margin-bottom: 24px; box-shadow: 0 10px 25px rgba(15,23,42,0.08); }
+    .hero-title { font-size: 24px; font-weight: 700; margin-bottom: 12px; }
+    .hero-subtitle { font-size: 15px; color: #4b5563; margin-bottom: 16px; }
+    .hero-benefits { font-size: 14px; color: #4b5563; margin-bottom: 16px; }
+    .hero-benefits li { margin-bottom: 4px; }
+    .hero-cta { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+    .btn-primary { background: #2563eb; color: #fff; border-radius: 999px; padding: 10px 20px; font-size: 15px; font-weight: 600; border: none; cursor: pointer; }
+    .btn-primary:hover { background: #1d4ed8; }
+    .hint { font-size: 12px; color: #6b7280; }
+    section { margin-bottom: 28px; }
+    h2 { font-size: 20px; font-weight: 700; margin-bottom: 12px; }
+    p { font-size: 14px; color: #4b5563; margin-bottom: 8px; }
+    ul { list-style: none; }
+    .steps { display: grid; grid-template-columns: repeat(auto-fit,minmax(210px,1fr)); gap: 12px; }
+    .step { background: #fff; border-radius: 12px; padding: 14px 14px 12px; box-shadow: 0 4px 12px rgba(15,23,42,0.05); }
+    .step-num { font-size: 12px; font-weight: 600; color: #2563eb; margin-bottom: 4px; }
+    .step-title { font-size: 15px; font-weight: 600; margin-bottom: 4px; }
+    .step-text { font-size: 13px; color: #4b5563; }
+    .block { background: #fff; border-radius: 16px; padding: 18px 16px 16px; box-shadow: 0 4px 16px rgba(15,23,42,0.04); }
+    .grid-2 { display: grid; grid-template-columns: minmax(0,1.4fr) minmax(0,1fr); gap: 16px; }
+    .tag { display: inline-flex; align-items: center; padding: 3px 8px; border-radius: 999px; font-size: 11px; font-weight: 500; background: #eff6ff; color: #1d4ed8; margin-bottom: 6px; }
+    table { width: 100%; border-collapse: collapse; font-size: 13px; margin-top: 4px; }
+    th, td { padding: 8px 6px; border-bottom: 1px solid #e5e7eb; text-align: left; vertical-align: top; }
+    th { font-weight: 600; background: #f9fafb; }
+    .pill { font-size: 12px; background: #f3f4f6; padding: 4px 7px; border-radius: 999px; display: inline-block; margin-bottom: 4px; }
+    .faq-item { margin-bottom: 8px; }
+    .faq-q { font-size: 14px; font-weight: 600; }
+    .faq-a { font-size: 13px; color: #4b5563; }
+    form { display: grid; grid-template-columns: 1fr 1fr; gap: 10px 12px; margin-top: 8px; }
+    .field { display: flex; flex-direction: column; gap: 4px; }
+    .field label { font-size: 12px; color: #374151; }
+    .field input, .field select, .field textarea {
+      border-radius: 8px; border: 1px solid #d1d5db; padding: 8px 9px; font-size: 14px; font-family: inherit;
+    }
+    .field textarea { resize: vertical; min-height: 70px; }
+    .form-full { grid-column: 1 / -1; }
+    .form-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; margin-top: 4px; }
+    footer { font-size: 12px; color: #9ca3af; margin-top: 24px; text-align: center; }
+    @media (max-width: 640px) {
+      header { flex-direction: column; align-items: flex-start; gap: 4px; }
+      .hero { padding: 18px 14px; }
+      .hero-title { font-size: 20px; }
+      .grid-2 { grid-template-columns: 1fr; }
+      form { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <header>
+      <div>
+        <div class="logo">Билет в Крым без нервов</div>
+        <div class="tagline">Персональное сопровождение поиска жд‑билетов</div>
+      </div>
+      <div class="tag">Летом билеты заканчиваются за часы</div>
+    </header>
+
+    <main>
+      <!-- HERO -->
+      <section class="hero" id="top">
+        <div class="hero-title">
+          Помогу «достать» жд‑билет в Крым в нужные даты, когда на сайте «всё разобрали»
+        </div>
+        <div class="hero-subtitle">
+          Беру на себя поиск свободных мест на нужный поезд и дату и оформляю билет на ваши данные.
+          Вы платите только за успешно оформленный билет.
+        </div>
+        <ul class="hero-benefits">
+          <li>• Актуально, когда билеты разлетаются в день открытия продаж.</li>
+          <li>• Подбираю вариант под ваши даты и состав семьи.</li>
+          <li>• Без бесконечного мониторинга сайта и случайного «повезёт / не повезёт».</li>
+        </ul>
+        <div class="hero-cta">
+          <a href="#request"><button class="btn-primary">Оставить запрос на билет</button></a>
+          <span class="hint">Услуга 750 ₽ за один оформленный билет. Билет оплачиваете отдельно по официальной цене.</span>
+        </div>
+      </section>
+
+      <!-- HOW IT WORKS -->
+      <section>
+        <h2>Как это работает</h2>
+        <p>Вы описываете свою ситуацию, дальше всё делаю я — от отслеживания до оформления билета.</p>
+        <div class="steps">
+          <div class="step">
+            <div class="step-num">Шаг 1</div>
+            <div class="step-title">Вы оставляете запрос</div>
+            <div class="step-text">
+              Указываете город отправления, дату выезда, количество мест, предпочтения по классу и удобный способ связи.
+            </div>
+          </div>
+          <div class="step">
+            <div class="step-num">Шаг 2</div>
+            <div class="step-title">Я отслеживаю подходящие места</div>
+            <div class="step-text">
+              В сезон билеты постоянно возвращают. Я слежу за появлением именно ваших параметров и сразу реагирую, когда появляется шанс.
+            </div>
+          </div>
+          <div class="step">
+            <div class="step-num">Шаг 3</div>
+            <div class="step-title">Оформляю билет на ваши данные</div>
+            <div class="step-text">
+              Как только находится подходящий вариант, оформляю билет и отправляю вам подтверждение и инструкцию по оплате.
+            </div>
+          </div>
+          <div class="step">
+            <div class="step-num">Шаг 4</div>
+            <div class="step-title">Вы спокойно едете на отдых</div>
+            <div class="step-text">
+              Без гонки «кто быстрее обновит страницу» и риска снова упустить билеты в нужные даты.
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- WHY IT WORKS -->
+      <section class="block">
+        <div class="grid-2">
+          <div>
+            <h2>Почему билетов «нет», но люди всё равно уезжают</h2>
+            <p>
+              Летом популярные поезда в Крым разбирают за первые часы продаж, поэтому позже на сайте часто «нулевые» остатки.
+            </p>
+            <p>
+              Дальше начинается вторая волна: люди возвращают билеты, меняют планы, не успевают оплатить брони. В этот момент
+              места снова попадают в продажу, но лишь на короткое время.
+            </p>
+            <p>
+              Чтобы поймать такие окна, нужно постоянно отслеживать продажи и сразу реагировать. Я беру эту рутину на себя,
+              чтобы вы могли думать об отдыхе, а не о кнопке «Обновить».
+            </p>
+          </div>
+          <div>
+            <div class="pill">Схема шанса на билет</div>
+            <p style="font-size:13px;color:#4b5563;">
+              Обычный сценарий:
+            </p>
+            <ul style="font-size:13px;color:#4b5563;margin-bottom:8px;">
+              <li>• День открытия продаж — билеты исчезают за часы.</li>
+              <li>• Через 1–5 дней — первые возвраты и «всплывающие» места.</li>
+              <li>• В течение недель — периодические окна по возвратам.</li>
+            </ul>
+            <p style="font-size:13px;color:#4b5563;">
+              Мой фокус — ваши конкретные даты и маршрут, а не абстрактный «дешёвый билет куда‑нибудь».
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- PRICING -->
+      <section class="block">
+        <h2>Сколько стоит сопровождение</h2>
+        <p>Вы платите только за успешно оформленный билет. Если подходящий вариант не появится — ничего не платите.</p>
+        <table>
+          <thead>
+            <tr>
+              <th>Услуга</th>
+              <th>Что входит</th>
+              <th>Цена</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1 билет в Крым</td>
+              <td>Отслеживание нужного поезда и даты, оформление билета на ваши данные, сопровождение до получения подтверждения.</td>
+              <td>750 ₽ / билет</td>
+            </tr>
+            <tr>
+              <td>Семья или компания (3–5 мест)</td>
+              <td>Поиск мест рядом, подбор возможных вариантов по датам и вагонам, оформление всех билетов.</td>
+              <td>от 2000 ₽ за группу</td>
+            </tr>
+          </tbody>
+        </table>
+        <p class="hint" style="margin-top:6px;">
+          Стоимость самого билета вы оплачиваете отдельно по официальной цене на сайте/сервисе.
+        </p>
+      </section>
+
+      <!-- WHO IT IS FOR -->
+      <section class="block">
+        <h2>Кому это особенно полезно</h2>
+        <ul style="font-size:14px;color:#4b5563;">
+          <li>• Семьям с детьми, когда важны конкретные даты и нормальное время выезда.</li>
+          <li>• Тем, у кого отпуск по жёстким датам и нет возможности «подвинуться» на пару дней.</li>
+          <li>• Тем, кто устал сидеть на сайте и ловить редкие «окошки» по возвратам.</li>
+          <li>• Тем, кто готов заплатить за предсказуемость и спокойный выезд без лотереи.</li>
+        </ul>
+        <p style="font-size:13px;color:#4b5563;margin-top:10px;">
+          Пример: семья из Москвы, 2 взрослых и ребёнок, в августе не нашла билеты в нужный день. За двое суток по возвратам
+          появились 3 места в одном вагоне — оформил все билеты в их даты без переплат.
+        </p>
+      </section>
+
+      <!-- FAQ -->
+      <section class="block">
+        <h2>Частые вопросы</h2>
+
+        <div class="faq-item">
+          <div class="faq-q">Вы продаёте билеты дороже официальной цены?</div>
+          <div class="faq-a">
+            Нет. Билет вы оплачиваете по официальной цене на сайте или в приложении. Я беру оплату только за поиск и сопровождение оформления.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-q">Что, если билет так и не найдётся?</div>
+          <div class="faq-a">
+            В этом случае вы ничего не платите. Оплата взимается только при успешном оформлении билета на ваши данные.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-q">Сколько времени занимает поиск?</div>
+          <div class="faq-a">
+            Обычно от нескольких часов до 2–3 дней — зависит от направления и дат. Если шансы невысокие, честно предупрежу об этом заранее.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-q">Насколько безопасно давать вам свои данные?</div>
+          <div class="faq-a">
+            Я прошу только те данные, которые нужны для оформления билета. Не передаю их третьим лицам и не храню дольше, чем требуется для покупки.
+          </div>
+        </div>
+      </section>
+
+      <!-- REQUEST FORM -->
+      <section class="block" id="request">
+        <h2>Оставьте запрос — оценю шансы и срок поиска</h2>
+        <p>Заполните форму ниже, и я в течение дня свяжусь с вами и предложу конкретный план по поиску билетов.</p>
+
+        <!-- В продакшене здесь лучше повесить отправку формы в ваш Telegram/почту через backend или сервис форм -->
+        <form>
+          <div class="field">
+            <label for="from">Город отправления</label>
+            <input id="from" name="from" type="text" placeholder="Например, Москва" required />
+          </div>
+          <div class="field">
+            <label for="date">Дата выезда</label>
+            <input id="date" name="date" type="date" required />
+          </div>
+          <div class="field">
+            <label for="count">Количество билетов</label>
+            <input id="count" name="count" type="number" min="1" max="6" placeholder="Например, 3" required />
+          </div>
+          <div class="field">
+            <label for="class">Класс</label>
+            <select id="class" name="class">
+              <option value="any">Не важно</option>
+              <option value="kupe">Купе</option>
+              <option value="platzkart">Плацкарт</option>
+              <option value="sv">СВ</option>
+            </select>
+          </div>
+          <div class="field form-full">
+            <label for="comment">Дополнительно (дети, гибкость дат, пожелания)</label>
+            <textarea id="comment" name="comment" placeholder="Например: 2 взрослых и ребёнок, удобно выехать плюс‑минус 1 день, хочу уехать вечером."></textarea>
+          </div>
+          <div class="field">
+            <label for="name">Имя</label>
+            <input id="name" name="name" type="text" placeholder="Как к вам обращаться" required />
+          </div>
+          <div class="field">
+            <label for="contact">Телефон или Telegram</label>
+            <input id="contact" name="contact" type="text" placeholder="+7… или @username" required />
+          </div>
+
+          <div class="form-full form-actions">
+            <button type="submit" class="btn-primary">Отправить запрос</button>
+            <span class="hint">Нажимая на кнопку, вы соглашаетесь на обработку данных для подбора и оформления билетов.</span>
+          </div>
+        </form>
+
+        <p style="font-size:13px;color:#4b5563;margin-top:10px;">
+          Можно написать сразу в мессенджер: <strong>@ваш_telegram</strong> (замените на свой контакт).
+        </p>
+      </section>
+    </main>
+
+    <footer>
+      © 2026 · Услуга по сопровождению поиска жд‑билетов в Крым · Не является агентом РЖД или перевозчика
+    </footer>
+  </div>
+</body>
+</html>
